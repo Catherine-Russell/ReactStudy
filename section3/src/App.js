@@ -1,17 +1,20 @@
 import React from 'react';
 
+const dynamicValues = ["goals", "aims", "intentions"]
+
+
 export function MainGoal() {
+    const i = Math.floor(Math.random() * 4);
     return (
     <div>
-        <h1> My main goals </h1>
+        <h1> My main {dynamicValues[i]}</h1>
         <ul>
         <li>Complete React Complete Guide</li>
         <li>World Domination</li>
         </ul>
     </div>
-        )
+    )
 }
-
 
 
 function App() {
