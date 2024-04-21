@@ -1,3 +1,19 @@
+import React from 'react';
+
+export function MainGoal() {
+    return (
+    <div>
+        <h1> My main goals </h1>
+        <ul>
+        <li>Complete React Complete Guide</li>
+        <li>World Domination</li>
+        </ul>
+    </div>
+        )
+}
+
+
+
 function App() {
   return (
     <div>
@@ -13,6 +29,8 @@ function App() {
       <main>
         <h2>Time to get started!</h2>
       </main>
+      <MainGoal />
+
     </div>
   );
 }
