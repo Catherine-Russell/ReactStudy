@@ -6,6 +6,9 @@ import pokemon from "./pokeData";
 import { TabButton } from "./components/TabButton";
 
 function App() {
+  const handleButtonClick = (selectedButton) => {
+    console.log(selectedButton);
+  };
   return (
     <div>
       <Header />
@@ -21,7 +24,12 @@ function App() {
           <BestPokemon {...pokemon.eevee} />
         </section>
         <menu>
-          <TabButton>Click me</TabButton>
+          <TabButton onClick={() => handleButtonClick("button number 1")}>
+            Click me
+          </TabButton>
+          <TabButton onClick={() => handleButtonClick("button number 2")}>
+            Click me too
+          </TabButton>
         </menu>
       </main>
     </div>
