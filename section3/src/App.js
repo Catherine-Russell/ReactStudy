@@ -2,10 +2,9 @@ import React from "react";
 import { Header } from "./components/Header";
 import { MainGoal } from "./components/MainGoal";
 import { BestPokemon } from "./components/BestPokemon";
-import pokemon from "./data";
+import pokemon from "./pokeData";
 
 function App() {
-  console.log({ ...pokemon.pikachu });
   return (
     <div>
       <Header />
