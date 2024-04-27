@@ -1,31 +1,54 @@
 import { TabButton } from "./TabButton";
 import EXAMPLES from "./data";
 import { useState } from "react";
+import "../../index.css";
 
 export function InformationSection() {
-  const [selectedTopic, setSelectedTopic] = useState("components");
+  const [selectedTopic, setSelectedTopic] = useState();
 
   const handleButtonClick = (selectedButton) => {
-    console.log(selectedButton);
     setSelectedTopic(selectedButton);
   };
   return (
-    <>
+    <div id="examples">
       <menu>
-        <TabButton onClick={() => handleButtonClick("components")}>
+        <TabButton
+          isSelected={selectedTopic === "components"}
+          onClick={() => handleButtonClick("components")}
+        >
           components
         </TabButton>
-        <TabButton onClick={() => handleButtonClick("jsx")}>jsx</TabButton>
-        <TabButton onClick={() => handleButtonClick("props")}>props</TabButton>
-        <TabButton onClick={() => handleButtonClick("state")}>state</TabButton>
+        <TabButton
+          isSelected={selectedTopic === "jsx"}
+          onClick={() => handleButtonClick("jsx")}
+        >
+          jsx
+        </TabButton>
+
+        <TabButton
+          isSelected={selectedTopic === "props"}
+          onClick={() => handleButtonClick("props")}
+        >
+          props
+        </TabButton>
+        <TabButton
+          isSelected={selectedTopic === "state"}
+          onClick={() => handleButtonClick("state")}
+        >
+          state
+        </TabButton>
       </menu>
-      <div id="tab-content">
-        <h3>{EXAMPLES[selectedTopic].title}</h3>
-        <p>{EXAMPLES[selectedTopic].description}</p>
-        <pre>
-          <code>{EXAMPLES[selectedTopic].code}</code>
-        </pre>
-      </div>
-    </>
+      {!selectedTopic ? (
+        <p>Please select a topic</p>
+      ) : (
+        <div id="examples">
+          <h3>{EXAMPLES[selectedTopic].title}</h3>
+          <p>{EXAMPLES[selectedTopic].description}</p>
+          <pre>
+            <code>{EXAMPLES[selectedTopic].code}</code>
+          </pre>
+        </div>
+      )}
+    </div>
   );
 }

@@ -1,6 +1,6 @@
 export function BestPokemon({ name, img, pdexNumber, pokedex }) {
   return (
-    <div>
+    <div id="best-pokemon">
       <img src={img} alt={name} />
       <h3>
         No. {pdexNumber}: {name}

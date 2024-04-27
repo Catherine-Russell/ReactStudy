@@ -53,13 +53,6 @@ main {
   margin: auto;
 }
 
-#best-pokemon {
-  padding: 2rem;
-  border-radius: 6px;
-  background-color: #140524;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
 main h2 {
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
@@ -67,7 +60,14 @@ main h2 {
   color: #a18aba;
 }
 
-#core-concepts ul {
+#best-pokemon {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #140524;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#best-pokemon ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -77,26 +77,30 @@ main h2 {
   justify-content: center;
 }
 
-#core-concepts li {
+#best-pokemon li {
   width: 10rem;
   text-align: center;
 }
 
-#core-concepts li img {
+#best-pokemon li img {
   height: 4rem;
   width: 6rem;
   object-fit: cover;
 }
 
-#core-concepts li h3 {
+#best-pokemon li h3 {
   margin: 0.5rem 0;
 }
 
-#core-concepts li p {
+#best-pokemon li p {
   font-size: 0.9rem;
 }
 
 #examples {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #140524;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   margin: 3rem auto;
 }
 
