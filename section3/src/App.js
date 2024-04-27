@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { MainGoal } from "./components/MainGoal";
 import { BestPokemon } from "./components/BestPokemon";
 import pokemon from "./pokeData";
+import { TabButton } from "./components/TabButton";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           <BestPokemon {...pokemon.lapras} />
           <BestPokemon {...pokemon.eevee} />
         </section>
+        <menu>
+          <TabButton>Click me</TabButton>
+        </menu>
       </main>
     </div>
   );
