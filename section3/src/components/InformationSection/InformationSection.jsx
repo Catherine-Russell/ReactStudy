@@ -2,6 +2,7 @@ import { TabButton } from "./TabButton";
 import EXAMPLES from "./data";
 import { useState } from "react";
 import "../../index.css";
+import Section from "../Section";
 
 export function InformationSection() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -10,7 +11,7 @@ export function InformationSection() {
     setSelectedTopic(selectedButton);
   };
   return (
-    <div id="examples">
+    <Section title="React Core Concepts" id="examples">
       <menu>
         <TabButton
           isSelected={selectedTopic === "components"}
@@ -49,6 +50,6 @@ export function InformationSection() {
           </pre>
         </div>
       )}
-    </div>
+    </Section>
   );
 }

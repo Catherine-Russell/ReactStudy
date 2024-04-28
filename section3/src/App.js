@@ -4,21 +4,20 @@ import { MainGoal } from "./components/MainGoal";
 import { BestPokemon } from "./components/BestPokemon";
 import pokeData from "./pokeData";
 import { InformationSection } from "./components/InformationSection/InformationSection";
+import Section from "./components/Section";
 
 function App() {
   return (
     <div>
       <Header />
       <main id="best-practice">
-        <h2>Time to get started!</h2>
         <MainGoal />
         <InformationSection />
-        <section id="best-pokemon">
-          <h2>Best Pokemon</h2>
+        <Section id="best-pokemon" title="Best Pokemon">
           {pokeData.map((pokemon) => (
             <BestPokemon key={pokemon.name} {...pokemon} />
           ))}
-        </section>
+        </Section>
       </main>
     </div>
   );
