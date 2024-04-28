@@ -6,26 +6,9 @@ import pokeData from "./pokeData";
 import { InformationSection } from "./components/InformationSection/InformationSection";
 
 function App() {
-  const DUMMY_TODOS = ["Learn React", "Practice React", "Profit!"];
-  function Todo({ text }) {
-    return <li>{text}</li>;
-  }
   return (
     <div>
-      <>
-        {DUMMY_TODOS[0]}
-        {DUMMY_TODOS.map((item) => (
-          <>
-            <p>hello {item}</p>
-            <Todo text={item} />
-          </>
-        ))}
-        {/* {DUMMY_TODOS.map((item) => {
-            <p>{item}</p>;
-          })} */}
-      </>
-      ;
-      {/* <Header />
+      <Header />
       <main id="best-practice">
         <h2>Time to get started!</h2>
         <MainGoal />
@@ -36,7 +19,7 @@ function App() {
             <BestPokemon key={pokemon.name} {...pokemon} />
           ))}
         </section>
-      </main> */}
+      </main>
     </div>
   );
 }
