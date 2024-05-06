@@ -8,7 +8,7 @@ export default function Player({ defaultName, symbol = "X" }) {
     if (!isEditing) {
       setName(name);
     }
-    setIsEditing(!isEditing);
+    setIsEditing((editing) => !editing);
   };
 
   const handleChange = (event) => {
